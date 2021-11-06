@@ -1,0 +1,13 @@
+---
+ - hosts: prod
+   name: copy file
+   become: yes
+   tasks:
+    - name: copy a file
+      copy:
+        src: /home/ansible/myfile
+        dest: /disk2
+    - name: copy using content
+      copy:
+        content: '### This is my content ###'
+        dest: /disk2/myfile
