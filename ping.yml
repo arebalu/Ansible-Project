@@ -1,3 +1,4 @@
+---
 - name: "Get ping response"
    hosts: all
    tasks:
