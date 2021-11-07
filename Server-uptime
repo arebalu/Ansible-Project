@@ -1,0 +1,10 @@
+---
+- name: display server uptime
+  hosts: all
+  tasks:
+    - name: Run uptime command
+      command: uptime
+      register: svr_up
+    - name: display the output
+      debug:
+        msg: "Server uptime is {{svr_up.stdout}}"
