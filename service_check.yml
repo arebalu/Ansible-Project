@@ -12,7 +12,7 @@
      - name: display the output
        debug:
          msg: " Service {{ service_name }} is not found "
-         when: output.rc == 1
+       when: output.rc == 1
      - name : Display the output 
        debug:
          msg: "service {{ service_name }} is running" 
